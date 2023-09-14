@@ -21,6 +21,12 @@ export const getters = {
   },
   getCurrentBredcrumb_3 (state) {
     return state.currentBredcrumbs.values[2]
+  },
+  getCurrentColor (state) {
+    if (state.currentBredcrumbs?.color) {
+      return state.currentBredcrumbs.color[0]
+    }
+    return false
   }
 }
 

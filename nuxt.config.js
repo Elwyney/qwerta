@@ -20,9 +20,13 @@ export default {
     ],
     script: [
       {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js',
-        type: 'text/javascript'
-      }
+        src: 'https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js',
+        type: 'text/javascript',
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',
+        type: 'text/javascript',
+      },
     ]
   },
 
@@ -41,7 +45,6 @@ export default {
       mode: 'client'
     }
   ],
-
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 

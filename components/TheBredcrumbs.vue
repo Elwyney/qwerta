@@ -7,12 +7,12 @@
       <table class="bredcrumbs__list">
         <tr>
           <td>
-            <nuxt-link exact to="/" class="bredcrumb">
+            <nuxt-link exact to="/" :class="getCurrentColor" class="bredcrumb">
               Главная
             </nuxt-link>
           </td>
           <td>
-            <div class="bredcrumb__pointer">
+            <div :class="getCurrentColor" class="bredcrumb__pointer">
               /
             </div>
           </td>
@@ -21,7 +21,7 @@
               exact
               :to="getCurrentPathForBredcrumb_1"
               class="bredcrumb"
-              :class="{ current: $store.state.bredcrumbs.bredcrumbAmount == 1 }"
+              :class="[{ current: $store.state.bredcrumbs.bredcrumbAmount == 1 }, getCurrentColor]"
             >
               {{ getCurrentBredcrumb_1 }}
             </nuxt-link>
@@ -29,6 +29,7 @@
           <td>
             <div
               v-if="$store.state.bredcrumbs.bredcrumbAmount >= 2"
+              :class="getCurrentColor"
               class="bredcrumb__pointer"
             >
               /
@@ -40,7 +41,7 @@
               exact
               :to="getCurrentPathForBredcrumb_2"
               class="bredcrumb"
-              :class="{ current: $store.state.bredcrumbs.bredcrumbAmount == 2 }"
+              :class="[{ current: $store.state.bredcrumbs.bredcrumbAmount == 2 }, getCurrentColor]"
             >
               {{ getCurrentBredcrumb_2 }}
             </nuxt-link>
@@ -48,6 +49,7 @@
           <td>
             <div
               v-if="$store.state.bredcrumbs.bredcrumbAmount >= 3"
+              :class="getCurrentColor"
               class="bredcrumb__pointer"
             >
               /
@@ -59,7 +61,7 @@
               exact
               :to="getCurrentPathForBredcrumb_3"
               class="bredcrumb"
-              :class="{ current: $store.state.bredcrumbs.bredcrumbAmount == 3 }"
+              :class="[{ current: $store.state.bredcrumbs.bredcrumbAmount == 3 }, getCurrentColor]"
             >
               {{ getCurrentBredcrumb_3 }}
             </nuxt-link>
@@ -80,7 +82,8 @@ export default {
     'getBgColor',
     'getCurrentPathForBredcrumb_1',
     'getCurrentPathForBredcrumb_2',
-    'getCurrentPathForBredcrumb_3'
+    'getCurrentPathForBredcrumb_3',
+    'getCurrentColor'
   ])
 }
 </script>
@@ -122,6 +125,9 @@ export default {
   font-size: 16px;
   line-height: 19px;
   color: #D4D4D4;
+}
+.currentColor {
+  color: black !important;
 }
 @media (max-width: 480px) {
   .bredcrumbs{

@@ -21,7 +21,7 @@
             </nuxt-link>
           </div>
           <div class="directions__card">
-            <nuxt-link to="/business-diagnostics">
+            <nuxt-link to="/site-audit">
               <div class="directions__img">
                 <img
                   src="../../assets/images/main-page/dir-cards/cards-img-02.png"
@@ -63,7 +63,7 @@
             </nuxt-link>
           </div>
           <div class="directions__card">
-            <nuxt-link to="/internet-marketing">
+            <nuxt-link to="/sitemaintenance">
               <div class="directions__img">
                 <img
                   src="../../assets/images/main-page/dir-cards/cards-img-05.png"
